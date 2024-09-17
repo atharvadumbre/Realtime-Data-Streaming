@@ -1,0 +1,40 @@
+24/09/16 22:32:53 WARN Shell: Did not find winutils.exe: {}
+java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://wiki.apache.org/hadoop/WindowsProblems
+	at org.apache.hadoop.util.Shell.fileNotFoundException(Shell.java:548)
+	at org.apache.hadoop.util.Shell.getHadoopHomeDir(Shell.java:569)
+	at org.apache.hadoop.util.Shell.getQualifiedBin(Shell.java:592)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:689)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.conf.Configuration.getTimeDurationHelper(Configuration.java:1814)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1791)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:183)
+	at org.apache.hadoop.util.ShutdownHookManager$HookEntry.<init>(ShutdownHookManager.java:207)
+	at org.apache.hadoop.util.ShutdownHookManager.addShutdownHook(ShutdownHookManager.java:302)
+	at org.apache.spark.util.SparkShutdownHookManager.install(ShutdownHookManager.scala:181)
+	at org.apache.spark.util.ShutdownHookManager$.shutdownHooks$lzycompute(ShutdownHookManager.scala:50)
+	at org.apache.spark.util.ShutdownHookManager$.shutdownHooks(ShutdownHookManager.scala:48)
+	at org.apache.spark.util.ShutdownHookManager$.addShutdownHook(ShutdownHookManager.scala:153)
+	at org.apache.spark.util.ShutdownHookManager$.<init>(ShutdownHookManager.scala:58)
+	at org.apache.spark.util.ShutdownHookManager$.<clinit>(ShutdownHookManager.scala)
+	at org.apache.spark.util.Utils$.createTempDir(Utils.scala:325)
+	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:343)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:871)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1007)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1016)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset.
+	at org.apache.hadoop.util.Shell.checkHadoopHomeInner(Shell.java:468)
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:439)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:516)
+	... 21 more
+24/09/16 22:32:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/09/16 22:32:53 INFO SecurityManager: Changing view acls to: athar
+24/09/16 22:32:53 INFO SecurityManager: Changing modify acls to: athar
+24/09/16 22:32:53 INFO SecurityManager: Changing view acls groups to: 
+24/09/16 22:32:53 INFO SecurityManager: Changing modify acls groups to: 
+24/09/16 22:32:53 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(athar); groups with view permissions: Set(); users  with modify permissions: Set(athar); groups with modify permissions: Set()
+24/09/16 22:32:54 INFO ShutdownHookManager: Shutdown hook called
+24/09/16 22:32:54 INFO ShutdownHookManager: Deleting directory C:\Users\athar\AppData\Local\Temp\spark-234c6b11-7817-4ac8-b584-da5831906e25
